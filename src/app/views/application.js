@@ -4,6 +4,7 @@ import TripListView from 'app/views/trip_list_view';
 
 const ApplicationView = Backbone.View.extend({
   initialize: function() {
+    console.log(">>> BREADCRUMBDS 1");
     this.render();
   },
 
@@ -34,11 +35,13 @@ const ApplicationView = Backbone.View.extend({
   },
 
   render: function() {
+    console.log("Breadcrumbs TRUE #2");
     const tripsView = new TripListView({
       //check that .tripList is right
       model: this.model.tripsList,
       el: this.$('main')
-    })
+
+    });
     tripsView.render();
 
     return this;

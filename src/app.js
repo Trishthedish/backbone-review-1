@@ -37,6 +37,7 @@ var application = new Application({
 });
 
 var appView = new ApplicationView({
+  // specifing what el is and saying it is now in charge of all the things. 
   el: '#application',
   model: application
 });
